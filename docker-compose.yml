@@ -5,10 +5,7 @@ services:
       context: ./
       dockerfile: Dockerfile.dev
   ports:
-       host: "3008"
-       container: "3000"
+     - '3000'
   volumes:
-     node_modules: /usr/app/node_modules
-     ./: /usr/app
-     #   - /usr/app/node_modules
-     #   - ./ :
+        - /usr/app/node_modules
+        - ./ :/usr/app
