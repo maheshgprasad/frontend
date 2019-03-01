@@ -2,11 +2,11 @@ version: '3'
 services:
   web:
      build: 
-      context: .
+      context: ./
       dockerfile: Dockerfile.dev
   ports:
        host: "3008"
        container: "3000"
   volumes:
        - :/app/node_modules
-       - .:/usr/app
+       - ./ :/usr/app
