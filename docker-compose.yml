@@ -8,5 +8,7 @@ services:
        host: "3008"
        container: "3000"
   volumes:
-       - /usr/app/node_modules
-       - ./ :/usr/app
+     node_modules: /usr/app/node_modules
+     ./: /usr/app
+     #   - /usr/app/node_modules
+     #   - ./ :
