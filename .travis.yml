@@ -1,0 +1,9 @@
+sudo: required
+services:
+    - docker
+before_install:
+    - docker build -t maheshgprasad/frontend -f Dockerfile.dev .
+
+
+script:
+    - docker run maheshgprasad/frontend npm run test -- --coverage
